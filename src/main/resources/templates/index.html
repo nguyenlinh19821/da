@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trang chu</title>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+	rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<script src="https://cdn.ckeditor.com/4.22.1/full/ckeditor.js"></script>
+</head>
+<body>
+	<!-- start header -->
+	<div th:replace="header :: fheader"></div>
+	<section class="maincontent">
+	<div th:utext="${text}" class="border p-2 -2">
+    </div>
+	<div>
+		<form th:action="@{/getInfor}" method="get">
+		<textarea name="editor1"></textarea>
+	                <script>
+	                        CKEDITOR.replace( 'editor1' );
+	                </script>
+	    <button type="submit">Gửi</button>
+	    </form>
+    </div>
+    
+    <div>
+    	<ul><li>Gỗ dác và gỗ lõi phân biệt, gỗ dác màu trắng vàng nhạt, gỗ lõi màu nâu vàng tới nâu sẫm.</li><li>Vòng năm tương đối rõ ràng, rải mô mềm hẹp ở ranh giới vòng năm.</li><li>Mạch đơn và kép ngắn, phân tán.</li><li>Mô mềm vây quanh mạch không đều, hình cánh, hình thoi. Trong một vòng sinh trưởng có khi gặp một đến hai dải mô mềm hẹp.</li><li>Tia gỗ nhỏ, hẹp, có màu gần giống màu gỗ</li><li>Gỗ cứng và nặng trung bình.</li></ul>
+    </div>
+    
+    
+    
+    
+	</section>
+	<section class="mainfooter"></section>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
